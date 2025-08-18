@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git url: 'https://github.com/deepthidec26/jenkins-cicd'
+        git url: 'https://github.com/deepthidec26/jenkins-cicd', credentialsId: 'github-pat'
       }
     }
     stage('Build Image') {
